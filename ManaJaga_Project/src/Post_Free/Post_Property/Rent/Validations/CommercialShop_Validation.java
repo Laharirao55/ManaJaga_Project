@@ -1,4 +1,4 @@
-package Post_Free.Post_Property;
+package Post_Free.Post_Property.Rent.Validations;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,8 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Post_Property_Rent_OfficeSpace_Validation
-{
+public class CommercialShop_Validation {
 
 	public static void main(String[] args) throws Exception 
 	{
@@ -40,7 +39,7 @@ public class Post_Property_Rent_OfficeSpace_Validation
 			
 		//select property from DD
 			WebElement propertytype_DD =driver.findElement(By.id("propertyTypeRent"));
-			new Select(propertytype_DD).selectByVisibleText("Office Space");
+			new Select(propertytype_DD).selectByVisibleText("Commercial Shop");
 
 		
 			Thread.sleep(3000);
@@ -91,55 +90,64 @@ public class Post_Property_Rent_OfficeSpace_Validation
 				WebElement Facing=driver.findElement(By.id("post-face"));
 				boolean flag8=Facing.isDisplayed();
 				System.out.println("Facing Displayed -->" +flag8);
+					
+				
+			//Lease Years Validation
+				WebElement LeaseYears=driver.findElement(By.id("leaseYears"));
+				boolean flag9=LeaseYears.isDisplayed();
+				System.out.println("LeaseYears Displayed -->" +flag9);
+				
 				
 			//availableStatus Validation
 				WebElement availableStatus=driver.findElement(By.id("availableStatus"));
-				boolean flag9=availableStatus.isDisplayed();
-				System.out.println("availableStatus Displayed -->" +flag9);
-			
-				//WaterAvailability Validation
-					WebElement WaterAvailability=driver.findElement(By.id("post-water"));
-					boolean flag10=WaterAvailability.isDisplayed();
-					System.out.println("WaterAvailability Displayed -->" +flag10);
-					
-				//Bathroom Validation
-					WebElement Bathroom=driver.findElement(By.id("post-Bathroom"));
-					boolean flag11=Bathroom.isDisplayed();
-					System.out.println("Bathroom Displayed -->" +flag11);
-					
-				//Cafeteria Validation
-					WebElement Cafeteria=driver.findElement(By.id("post-Cafeteria"));
-					boolean flag12=Cafeteria.isDisplayed();
-					System.out.println("Cafeteria Displayed -->" +flag12);
-					
-				//Watchmen field validation
-					WebElement Watchmen=driver.findElement(By.id("post-watchmen"));
-					boolean flag13=Watchmen.isDisplayed();
-					System.out.println("Watchmen Displayed -->" +flag13);
+				boolean flag10=availableStatus.isDisplayed();
+				System.out.println("availableStatus Displayed -->" +flag10);
 									
-				//CC Cameras field validation
-					WebElement CC_Cameras=driver.findElement(By.id("post-cc-cameras"));
-					boolean flag14=CC_Cameras.isDisplayed();
-					System.out.println("CC_Cameras Displayed -->" +flag14);
-										
-				//RentDetails field validation
-					WebElement RentDetails=driver.findElement(By.id("post-rent-details"));
-					boolean flag15=RentDetails.isDisplayed();
-					System.out.println("RentDetails Displayed -->" +flag15);
-							
-				//Response from field validation
-					WebElement responsefrom=driver.findElement(By.id("post-responsefrom"));
-					boolean flag16=responsefrom.isDisplayed();
-					System.out.println("responsefrom Displayed -->" +flag16);						
-						
-					System.out.println("       ");
-					System.out.println("'Displayed all the fields'");
-						
-					Thread.sleep(2000);
-					driver.close();				
+			//Permission field validation
+				WebElement permission=driver.findElement(By.id("post-permission"));
+				boolean flag11=permission.isDisplayed();
+				System.out.println("permission Displayed -->" +flag11);
 				
+				
+		//WaterAvailability Validation
+			WebElement WaterAvailability=driver.findElement(By.id("post-water"));
+			boolean flag12=WaterAvailability.isDisplayed();
+			System.out.println("WaterAvailability Displayed -->" +flag12);
+			
+		//Bathroom Validation
+			WebElement Bathroom=driver.findElement(By.id("post-Bathroom"));
+			boolean flag13=Bathroom.isDisplayed();
+			System.out.println("Bathroom Displayed -->" +flag13);
+	
+		//Watchmen field validation
+			WebElement Watchmen=driver.findElement(By.id("post-watchmen"));
+			boolean flag14=Watchmen.isDisplayed();
+			System.out.println("Watchmen Displayed -->" +flag14);
+							
+		//CC Cameras field validation
+			WebElement CC_Cameras=driver.findElement(By.id("post-cc-cameras"));
+			boolean flag15=CC_Cameras.isDisplayed();
+			System.out.println("CC_Cameras Displayed -->" +flag15);
+								
+		//RentDetails field validation
+			WebElement RentDetails=driver.findElement(By.id("post-rent-details"));
+			boolean flag16=RentDetails.isDisplayed();
+			System.out.println("RentDetails Displayed -->" +flag16);
+					
+		//Response from field validation
+			WebElement responsefrom=driver.findElement(By.id("post-responsefrom"));
+			boolean flag17=responsefrom.isDisplayed();
+			System.out.println("responsefrom Displayed -->" +flag17);						
+				
+			System.out.println("       ");
+			System.out.println("'Displayed all the fields'");
+				
+			Thread.sleep(2000);
+			driver.close();				
+				
+					
 		
-
+			
 	}
 
 }

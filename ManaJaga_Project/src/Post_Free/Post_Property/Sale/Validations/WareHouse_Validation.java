@@ -1,4 +1,4 @@
-package Post_Free.Post_Property;
+package Post_Free.Post_Property.Sale.Validations;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,50 +6,46 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Post_Property_Sale_OfficeSpace_Validation 
+public class WareHouse_Validation 
 {
 
 
 	public static void main(String[] args) throws Exception 
 	{
 		
-		
-				//browser initiation
-					System.setProperty("webdriver.chrome.driver","Drivers\\chromedriver.exe");
-					WebDriver driver=new ChromeDriver();
-				//open url
-					driver.get("https://manajaga.com/");
-					driver.manage().window().maximize();
-					
-				// open post free
-					driver.findElement(By.id("blink_me")).click();
-					
-				// Select Post Property
-					driver.findElement(By.xpath("//label[@for='PostProperty']")).click();
-					
-				//Select next button
-					driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[1]")).click();
-					
-				// Select I am
-					driver.findElement(By.xpath("//label[@for='n_pp_owner']")).click();
-					
-				//select property for
-					driver.findElement(By.xpath("//label[@for='Sale'][contains(.,'Sale')]")).click();
-					
-				// Select next button
-					driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[2]")).click();
-					
-				//select property from DD
-					WebElement propertytype_DD =driver.findElement(By.id("propertyTypeSale"));
-					new Select(propertytype_DD).selectByVisibleText("Office Space");
-		
-					Thread.sleep(1000);
-					
-				//bathroom field validation
-					WebElement Bathrooms=driver.findElement(By.id("bathrooms"));
-					boolean flag=Bathrooms.isDisplayed();
-					System.out.println("Bathrooms Displayed -->" +flag);
-					
+			
+			//browser initiation
+				System.setProperty("webdriver.chrome.driver","Drivers\\chromedriver.exe");
+				WebDriver driver=new ChromeDriver();
+			//open url
+				driver.get("https://manajaga.com/");
+				driver.manage().window().maximize();
+				
+			// open post free
+				driver.findElement(By.id("blink_me")).click();
+				
+			// Select Post Property
+				driver.findElement(By.xpath("//label[@for='PostProperty']")).click();
+				
+			//Select next button
+				driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[1]")).click();
+				
+			// Select I am
+				driver.findElement(By.xpath("//label[@for='n_pp_owner']")).click();
+				
+			//select property for
+				driver.findElement(By.xpath("//label[@for='Sale'][contains(.,'Sale')]")).click();
+				
+			// Select next button
+				driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[2]")).click();
+				
+			//select property from DD
+				WebElement propertytype_DD =driver.findElement(By.id("propertyTypeSale"));
+				new Select(propertytype_DD).selectByVisibleText("Ware House");
+				
+				
+				
+				
 				//total floors field validation
 					WebElement TotalFloors=driver.findElement(By.id("post-totalfloors"));
 					boolean flag1=TotalFloors.isDisplayed();
@@ -100,51 +96,45 @@ public class Post_Property_Sale_OfficeSpace_Validation
 					boolean flag10=Facing.isDisplayed();
 					System.out.println("Facing Displayed -->" +flag10);
 					
-				//Lease years field validation
-					WebElement Leaseyears=driver.findElement(By.id("leaseYears"));
-					boolean flag11=Leaseyears.isDisplayed();
-					System.out.println("Leaseyears Displayed -->" +flag11);
 					
 				//Trade type field validation
 					WebElement tradetype=driver.findElement(By.id("post-tradetype"));
 					boolean flag12=tradetype.isDisplayed();
 					System.out.println("tradetype Displayed -->" +flag12);
-					
-				//Possession field validation
-					WebElement possession=driver.findElement(By.id("post-possession"));
-					boolean flag13=possession.isDisplayed();
-					System.out.println("possession Displayed -->" +flag13);
-					
-				//Cafeteria field validation
-					WebElement Cafeteria=driver.findElement(By.id("post-Cafeteria"));
-					boolean flag14=Cafeteria.isDisplayed();
-					System.out.println("Cafeteria Displayed -->" +flag14);
-					
+						
+				//PropertyPermission field validation
+					WebElement PropertyPermission=driver.findElement(By.id("post-permission"));
+					boolean flag13=PropertyPermission.isDisplayed();
+					System.out.println("PropertyPermission Displayed -->" +flag13);
+						
+				//Bathroom field validation
+					WebElement Bathroom=driver.findElement(By.id("post-Bathroom"));
+					boolean flag14=Bathroom.isDisplayed();
+					System.out.println("Bathroom Displayed -->" +flag14);
+						
 				//parking Available field validation
 					WebElement parking=driver.findElement(By.id("post-parking"));
 					boolean flag15=parking.isDisplayed();
 					System.out.println("parking Displayed -->" +flag15);
-							
+								
 				//Total price field validation
-					WebElement	totalprice=driver.findElement(By.id("post-totalprice"));
-					boolean flag16=	totalprice.isDisplayed();
-					System.out.println("totalprice Displayed -->" +flag16);
-							
+						WebElement	totalprice=driver.findElement(By.id("post-totalprice"));
+						boolean flag16=	totalprice.isDisplayed();
+						System.out.println("totalprice Displayed -->" +flag16);
+								
 				//Response from field validation
 					WebElement responsefrom=driver.findElement(By.id("post-responsefrom"));
 					boolean flag17=responsefrom.isDisplayed();
 					System.out.println("responsefrom Displayed -->" +flag17);
-					
+						
 					System.out.println("       ");
-					
+						
 					System.out.println("'Displayed all the fields'");
-					
+						
 					Thread.sleep(2000);
 					driver.close();
-			
+						
 		
 	}
-
-	
 	
 }

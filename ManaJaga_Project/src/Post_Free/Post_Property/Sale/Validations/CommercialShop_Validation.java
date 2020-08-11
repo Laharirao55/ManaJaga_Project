@@ -1,4 +1,4 @@
-package Post_Free.Post_Property;
+package Post_Free.Post_Property.Sale.Validations;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,14 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Post_Property_Sale_PentHouse_Validation 
+public class CommercialShop_Validation 
 {
 
 
 	public static void main(String[] args) throws Exception 
 	{
 		
-				
+		
 			//browser initiation
 				System.setProperty("webdriver.chrome.driver","Drivers\\chromedriver.exe");
 				WebDriver driver=new ChromeDriver();
@@ -41,25 +41,22 @@ public class Post_Property_Sale_PentHouse_Validation
 				
 			//select property from DD
 				WebElement propertytype_DD =driver.findElement(By.id("propertyTypeSale"));
-				new Select(propertytype_DD).selectByVisibleText("Pent House");
-		
-			
-				Thread.sleep(3000);
-				
-			//bedroom field validation
-				WebElement Bedrooms=driver.findElement(By.id("bedrooms"));
-				boolean flag=Bedrooms.isDisplayed();
-				System.out.println("Bedrooms Displayed -->" +flag);
-				
+				new Select(propertytype_DD).selectByVisibleText("Commercial Shop");
+
 			//bathroom field validation
-				WebElement Bathrooms=driver.findElement(By.id("post-bathrooms"));
-				boolean flag1=Bathrooms.isDisplayed();
-				System.out.println("Bathrooms Displayed -->" +flag1);
+				WebElement Bathrooms=driver.findElement(By.id("bathrooms"));
+				boolean flag=Bathrooms.isDisplayed();
+				System.out.println("Bathrooms Displayed -->" +flag);
 				
-			//Balconies field validation
-				WebElement Balconies=driver.findElement(By.id("balconies"));
-				boolean flag2=Balconies.isDisplayed();
-				System.out.println("Balconies Displayed -->" +flag2);
+			//total floors field validation
+				WebElement TotalFloors=driver.findElement(By.id("post-totalfloors"));
+				boolean flag1=TotalFloors.isDisplayed();
+				System.out.println("TotalFloors Displayed -->" +flag1);
+				
+			//floor no. field validation
+				WebElement Floorno=driver.findElement(By.id("post-floorno"));
+				boolean flag2=Floorno.isDisplayed();
+				System.out.println("Floorno Displayed -->" +flag2);
 				
 			//Area field validation
 				WebElement Area=driver.findElement(By.id("post-area"));
@@ -91,70 +88,40 @@ public class Post_Property_Sale_PentHouse_Validation
 				boolean flag8=BuildingAge.isDisplayed();
 				System.out.println("BuildingAge Displayed -->" +flag8);
 				
-			//OpenSides field validation
-				WebElement OpenSides=driver.findElement(By.id("post-opensides"));
-				boolean flag9=OpenSides.isDisplayed();
-				System.out.println("OpenSides Displayed -->" +flag9);
-				
 			//Facing field validation
 				WebElement Facing=driver.findElement(By.id("post-face"));
-				boolean flag10=Facing.isDisplayed();
-				System.out.println("Facing Displayed -->" +flag10);
-				
-			//PoojaRoom field validation
-				WebElement PoojaRoom=driver.findElement(By.id("post-poojaroom"));
-				boolean flag11=PoojaRoom.isDisplayed();
-				System.out.println("PoojaRoom Displayed -->" +flag11);
+				boolean flag9=Facing.isDisplayed();
+				System.out.println("Facing Displayed -->" +flag9);
 				
 			//Other room field validation
 				WebElement OtherRoom=driver.findElement(By.id("post-otherroom"));
-				boolean flag12=OtherRoom.isDisplayed();
-				System.out.println("OtherRoom Displayed -->" +flag12);
+				boolean flag10=OtherRoom.isDisplayed();
+				System.out.println("OtherRoom Displayed -->" +flag10);
 				
 			//Trade type field validation
 				WebElement tradetype=driver.findElement(By.id("post-tradetype"));
-				boolean flag13=tradetype.isDisplayed();
-				System.out.println("tradetype Displayed -->" +flag13);
+				boolean flag11=tradetype.isDisplayed();
+				System.out.println("tradetype Displayed -->" +flag11);
 				
 			//Possession field validation
 				WebElement possession=driver.findElement(By.id("post-possession"));
-				boolean flag14=possession.isDisplayed();
-				System.out.println("possession Displayed -->" +flag14);
-				
-			//Permission field validation
-				WebElement permission=driver.findElement(By.id("post-permission"));
-				boolean flag15=permission.isDisplayed();
-				System.out.println("permission Displayed -->" +flag15);
-				
-			//gated community field validation
-				WebElement gcommunity=driver.findElement(By.id("post-gcommunity"));
-				boolean flag16=gcommunity.isDisplayed();
-				System.out.println("gcommunity Displayed -->" +flag16);
+				boolean flag12=possession.isDisplayed();
+				System.out.println("possession Displayed -->" +flag12);
 				
 			//parking field validation
 				WebElement parking=driver.findElement(By.id("post-parking"));
-				boolean flag17=parking.isDisplayed();
-				System.out.println("parking Displayed -->" +flag17);
-				
+				boolean flag13=parking.isDisplayed();
+				System.out.println("parking Displayed -->" +flag13);
+						
 			//Total price field validation
 				WebElement	totalprice=driver.findElement(By.id("post-totalprice"));
-				boolean flag18=	totalprice.isDisplayed();
-				System.out.println("totalprice Displayed -->" +flag18);
-				
+				boolean flag14=	totalprice.isDisplayed();
+				System.out.println("totalprice Displayed -->" +flag14);
+						
 			//Response from field validation
 				WebElement responsefrom=driver.findElement(By.id("post-responsefrom"));
-				boolean flag19=responsefrom.isDisplayed();
-				System.out.println("responsefrom Displayed -->" +flag19);
-				
-			//Url field validation
-				WebElement youtube_url=driver.findElement(By.id("post-youtube-url"));
-				boolean flag20= youtube_url.isDisplayed();
-				System.out.println("youtube_url Displayed -->" +flag20);
-				
-			//Description field validation
-				WebElement description=driver.findElement(By.id("post-description"));
-				boolean flag21= description.isDisplayed();
-				System.out.println("description Displayed -->" +flag21);
+				boolean flag15=responsefrom.isDisplayed();
+				System.out.println("responsefrom Displayed -->" +flag15);
 				
 				System.out.println("       ");
 				
@@ -163,7 +130,10 @@ public class Post_Property_Sale_PentHouse_Validation
 				Thread.sleep(2000);
 				driver.close();
 				
+	
+		
 	}
 
+	
 	
 }

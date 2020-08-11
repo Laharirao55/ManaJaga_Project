@@ -1,4 +1,4 @@
-package Post_Free.Post_Property;
+package Post_Free.Post_Property.Sale.Validations;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Post_Property_Sale_Apartment_Validation 
+public class Apartment_Validation 
 {
 
 
