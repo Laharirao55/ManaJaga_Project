@@ -6,9 +6,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+
+
 public class PP_Sale_Apartment_Validation 
 {
+	
+	public static WebDriver driver;
+	public static void fieldvalidation(String element){
 
+		WebElement name = driver.findElement(By.id(element));
+		
+		boolean flag = name.isDisplayed();
+		System.out.println(element+"  Displayed -->" +flag);
+	}
 
 	public static void main(String[] args) throws Exception 
 	{
@@ -16,10 +26,12 @@ public class PP_Sale_Apartment_Validation
 					
 				//browser initiation
 					System.setProperty("webdriver.chrome.driver","Drivers\\chromedriver.exe");
-					WebDriver driver=new ChromeDriver();
+					
 				//open url
 					driver.get("https://manajaga.com/");
 					driver.manage().window().maximize();
+					
+					
 					
 				// open post free
 					driver.findElement(By.id("blink_me")).click();
@@ -43,13 +55,15 @@ public class PP_Sale_Apartment_Validation
 					WebElement propertytype_DD =driver.findElement(By.id("propertyTypeSale"));
 					new Select(propertytype_DD).selectByVisibleText("Apartment");
 			
-				
+					
 					Thread.sleep(3000);
 					
 				//bedroom field validation
-					WebElement Bedrooms=driver.findElement(By.id("bedrooms"));
-					boolean flag=Bedrooms.isDisplayed();
-					System.out.println("Bedrooms Displayed -->" +flag);
+					fieldvalidation("bedrooms");
+					
+//					WebElement Bedrooms=driver.findElement(By.id("bedrooms"));
+//					boolean flag=Bedrooms.isDisplayed();
+//					System.out.println("Bedrooms Displayed -->" +flag);
 					
 				//bathroom field validation
 					WebElement Bathrooms=driver.findElement(By.id("post-bathrooms"));
