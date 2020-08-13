@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class CommercialPlot_Validation 
+public class PP_Rent_CommercialPlot_Validation 
 {
 
 	public static void main(String[] args) throws Exception 

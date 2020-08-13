@@ -12,7 +12,8 @@ public class PP_Sale_Apartment_Validation
 {
 	
 	public static WebDriver driver;
-	public static void fieldvalidation(String element){
+	public static void fieldvalidation(String element)
+	{
 
 		WebElement name = driver.findElement(By.id(element));
 		
@@ -31,31 +32,21 @@ public class PP_Sale_Apartment_Validation
 					driver.get("https://manajaga.com/");
 					driver.manage().window().maximize();
 					
-					
-					
 				// open post free
 					driver.findElement(By.id("blink_me")).click();
-					
 				// Select Post Property
 					driver.findElement(By.xpath("//label[@for='PostProperty']")).click();
-					
 				//Select next button
 					driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[1]")).click();
-					
 				// Select I am
 					driver.findElement(By.xpath("//label[@for='n_pp_owner']")).click();
-					
 				//select property for
 					driver.findElement(By.xpath("//label[@for='Sale'][contains(.,'Sale')]")).click();
-					
 				// Select next button
 					driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[2]")).click();
-					
 				//select property from DD
 					WebElement propertytype_DD =driver.findElement(By.id("propertyTypeSale"));
 					new Select(propertytype_DD).selectByVisibleText("Apartment");
-			
-					
 					Thread.sleep(3000);
 					
 				//bedroom field validation

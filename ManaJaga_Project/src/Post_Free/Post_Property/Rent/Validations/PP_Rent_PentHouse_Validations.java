@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class PentHouse_Validations 
+public class PP_Rent_PentHouse_Validations 
 {
 
 	public static void main(String[] args) throws Exception 

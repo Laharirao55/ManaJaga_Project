@@ -1,4 +1,4 @@
-package Post_Free.Require_Property.Buy.Validations;
+package Post_Free.Require_Property.Rent.Validations;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,7 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class Apartment_Validation {
+public class RP_Rent_Apartment_Validation 
+{
+
 
 	public static void main(String[] args) throws Exception 
 	{
@@ -20,23 +22,24 @@ public class Apartment_Validation {
 		//open url
 			driver.get("https://manajaga.com/");
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 			
 		// open post free
 			driver.findElement(By.id("blink_me")).click();
-			Thread.sleep(2000);
 			
-		// Select Require Property
+			Thread.sleep(2000);
+		// Select Post Property
 			driver.findElement(By.xpath("//label[@for='RequiredProperty']")).click();
 			
 		//Select next button
 			driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[1]")).click();
 			
 		// Select I am
-			driver.findElement(By.xpath("//label[@for='n_pp_buyer']")).click();
+			driver.findElement(By.xpath("//label[@for='n_pp_tenant']")).click();
+			
 			
 		//select property for
-			driver.findElement(By.xpath("//label[@for='ReqBuy']")).click();
+			driver.findElement(By.xpath("//label[@for='ReqRent']")).click();
 			
 		// Select next button
 			driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[2]")).click();
@@ -92,50 +95,35 @@ public class Apartment_Validation {
 				boolean flag9=OpenSides.isDisplayed();
 				System.out.println("OpenSides Displayed -->" +flag9);
 				
-				//TradeType field validation
-					WebElement TradeType=driver.findElement(By.id("req-tradetype"));
-					boolean flag10=TradeType.isDisplayed();
-					System.out.println("TradeType Displayed -->" +flag10);
-					
-				//PropertyPermission field validation
-					WebElement PropertyPermission=driver.findElement(By.id("req-permission"));
-					boolean flag11=PropertyPermission.isDisplayed();
-					System.out.println("PropertyPermission Displayed -->" +flag11);
-					
 				//GatedCommunity field validation
 					WebElement GatedCommunity=driver.findElement(By.id("req-gcommunity"));
-					boolean flag12=GatedCommunity.isDisplayed();
-					System.out.println("GatedCommunity Displayed -->" +flag12);
+					boolean flag10=GatedCommunity.isDisplayed();
+					System.out.println("GatedCommunity Displayed -->" +flag10);
 					
-					//ParkingAvailable field validation
+				//ParkingAvailable field validation
 					WebElement ParkingAvailable=driver.findElement(By.id("req-parking"));
-					boolean flag13=ParkingAvailable.isDisplayed();
-					System.out.println("ParkingAvailable Displayed -->" +flag13);
+					boolean flag11=ParkingAvailable.isDisplayed();
+					System.out.println("ParkingAvailable Displayed -->" +flag11);
 					
 					//PoojaRoom field validation
 						WebElement PoojaRoom=driver.findElement(By.id("req-poojaroom"));
-						boolean flag14=PoojaRoom.isDisplayed();
-						System.out.println("PoojaRoom Displayed -->" +flag14);
+						boolean flag12=PoojaRoom.isDisplayed();
+						System.out.println("PoojaRoom Displayed -->" +flag12);
 						
 					//OtherRoom field validation
 						WebElement OtherRoom=driver.findElement(By.id("req-otherroom"));
-						boolean flag15=OtherRoom.isDisplayed();
-						System.out.println("OtherRoom Displayed -->" +flag15);
-						
-					//Possession field validation
-						WebElement Possession=driver.findElement(By.id("req-possession"));
-						boolean flag16=Possession.isDisplayed();
-						System.out.println("Possession Displayed -->" +flag16);
-							
+						boolean flag13=OtherRoom.isDisplayed();
+						System.out.println("OtherRoom Displayed -->" +flag13);
+					
 					//Expected_Total_price field validation
 							WebElement	Expected_Total_price=driver.findElement(By.id("Req-ExpectingTotalPrice"));
-							boolean flag17=	Expected_Total_price.isDisplayed();
-							System.out.println("Expected_Total_price Displayed -->" +flag17);
+							boolean flag14=	Expected_Total_price.isDisplayed();
+							System.out.println("Expected_Total_price Displayed -->" +flag14);
 							
 					//Response from field validation
 							WebElement responsefrom=driver.findElement(By.id("req-responsefrom"));
-							boolean flag18=responsefrom.isDisplayed();
-							System.out.println("responsefrom Displayed -->" +flag18);
+							boolean flag15=responsefrom.isDisplayed();
+							System.out.println("responsefrom Displayed -->" +flag15);
 						
 							System.out.println("       ");
 							System.out.println("'Displayed all the fields'");
@@ -146,4 +134,6 @@ public class Apartment_Validation {
 			
 	}
 
+	
+	
 }

@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class AgriculturalLand_Validation 
+public class RP_Rent_AgriculturalLand_Validation 
 {
 
 
@@ -26,23 +26,17 @@ public class AgriculturalLand_Validation
 			
 		// open post free
 			driver.findElement(By.id("blink_me")).click();
-			
 		// Select Post Property
 			driver.findElement(By.xpath("//label[@for='RequiredProperty']")).click();
-			
 		//Select next button
 			driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[1]")).click();
-			
 		// Select I am
 			driver.findElement(By.xpath("//label[@for='n_pp_tenant']")).click();
 			Thread.sleep(1000);
-			
 		//select property for
 			driver.findElement(By.xpath("//label[@for='ReqRent']")).click();
-			
 		// Select next button
 			driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[2]")).click();
-			
 		//select property from DD
 			WebElement propertytype_DD =driver.findElement(By.id("requirePropertyTypeBuyRent"));
 			new Select(propertytype_DD).selectByVisibleText("Agriculture Land");
