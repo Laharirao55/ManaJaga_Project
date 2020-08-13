@@ -6,14 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class IndividualHouse_Validation 
+public class PP_Sale_PentHouse_Validation 
 {
 
 
 	public static void main(String[] args) throws Exception 
 	{
 		
-
 				
 			//browser initiation
 				System.setProperty("webdriver.chrome.driver","Drivers\\chromedriver.exe");
@@ -42,7 +41,7 @@ public class IndividualHouse_Validation
 				
 			//select property from DD
 				WebElement propertytype_DD =driver.findElement(By.id("propertyTypeSale"));
-				new Select(propertytype_DD).selectByVisibleText("Individual House");
+				new Select(propertytype_DD).selectByVisibleText("Pent House");
 		
 			
 				Thread.sleep(3000);
@@ -57,10 +56,10 @@ public class IndividualHouse_Validation
 				boolean flag1=Bathrooms.isDisplayed();
 				System.out.println("Bathrooms Displayed -->" +flag1);
 				
-			//total floors field validation
-				WebElement TotalFloors=driver.findElement(By.id("post-totalfloors"));
-				boolean flag2=TotalFloors.isDisplayed();
-				System.out.println("TotalFloors Displayed -->" +flag2);
+			//Balconies field validation
+				WebElement Balconies=driver.findElement(By.id("balconies"));
+				boolean flag2=Balconies.isDisplayed();
+				System.out.println("Balconies Displayed -->" +flag2);
 				
 			//Area field validation
 				WebElement Area=driver.findElement(By.id("post-area"));
@@ -132,35 +131,30 @@ public class IndividualHouse_Validation
 				boolean flag16=gcommunity.isDisplayed();
 				System.out.println("gcommunity Displayed -->" +flag16);
 				
-			//Balcony field validation
-				WebElement Balcony=driver.findElement(By.id("post-balcony"));
-				boolean flag17=Balcony.isDisplayed();
-				System.out.println("Balcony Displayed -->" +flag17);
-				
 			//parking field validation
 				WebElement parking=driver.findElement(By.id("post-parking"));
-				boolean flag18=parking.isDisplayed();
-				System.out.println("parking Displayed -->" +flag18);
+				boolean flag17=parking.isDisplayed();
+				System.out.println("parking Displayed -->" +flag17);
 				
 			//Total price field validation
 				WebElement	totalprice=driver.findElement(By.id("post-totalprice"));
-				boolean flag19=	totalprice.isDisplayed();
-				System.out.println("totalprice Displayed -->" +flag19);
+				boolean flag18=	totalprice.isDisplayed();
+				System.out.println("totalprice Displayed -->" +flag18);
 				
 			//Response from field validation
 				WebElement responsefrom=driver.findElement(By.id("post-responsefrom"));
-				boolean flag20=responsefrom.isDisplayed();
-				System.out.println("responsefrom Displayed -->" +flag20);
+				boolean flag19=responsefrom.isDisplayed();
+				System.out.println("responsefrom Displayed -->" +flag19);
 				
 			//Url field validation
 				WebElement youtube_url=driver.findElement(By.id("post-youtube-url"));
-				boolean flag21= youtube_url.isDisplayed();
-				System.out.println("youtube_url Displayed -->" +flag21);
+				boolean flag20= youtube_url.isDisplayed();
+				System.out.println("youtube_url Displayed -->" +flag20);
 				
 			//Description field validation
 				WebElement description=driver.findElement(By.id("post-description"));
-				boolean flag22= description.isDisplayed();
-				System.out.println("description Displayed -->" +flag22);
+				boolean flag21= description.isDisplayed();
+				System.out.println("description Displayed -->" +flag21);
 				
 				System.out.println("       ");
 				
@@ -169,10 +163,7 @@ public class IndividualHouse_Validation
 				Thread.sleep(2000);
 				driver.close();
 				
-
-		
 	}
 
-	
 	
 }

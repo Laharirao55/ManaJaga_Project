@@ -6,14 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class ResidentialPlot_Validation 
+public class PP_Sale_CommercialPlot_Validation 
 {
 
 
 	public static void main(String[] args) throws Exception 
 	{
 	
-		
 			//browser initiation
 				System.setProperty("webdriver.chrome.driver","Drivers\\chromedriver.exe");
 				WebDriver driver=new ChromeDriver();
@@ -41,9 +40,9 @@ public class ResidentialPlot_Validation
 				
 			//select property from DD
 				WebElement propertytype_DD =driver.findElement(By.id("propertyTypeSale"));
-				new Select(propertytype_DD).selectByVisibleText("Residential Plot");
+				new Select(propertytype_DD).selectByVisibleText("Commercial Plot");
 				
-			//Residential Plot fields Validation
+				
 				
 			//Area field validation
 				WebElement Area=driver.findElement(By.id("post-areas-few"));
@@ -79,18 +78,16 @@ public class ResidentialPlot_Validation
 				WebElement BoundaryWith=driver.findElement(By.id("boundaryWith"));
 				boolean flag6=BoundaryWith.isDisplayed();
 				System.out.println("BoundaryWith Displayed -->" +flag6);
-			
+				
+			//Lease years field validation
+				WebElement Leaseyears=driver.findElement(By.id("leaseYears"));
+				boolean flag7=Leaseyears.isDisplayed();
+				System.out.println("Leaseyears Displayed -->" +flag7);
+				
 			//Venture validation
 				WebElement venture=driver.findElement(By.id("post-venture"));
-				boolean flag7= venture.isDisplayed();
-				System.out.println("Venture Displayed -->" +flag7);
-				
-
-			//LRS validation
-				WebElement LRS=driver.findElement(By.id("post-lrs"));
-				boolean flag8= LRS.isDisplayed();
-				System.out.println("LRS Displayed -->" +flag8);
-				
+				boolean flag8= venture.isDisplayed();
+				System.out.println("Venture Displayed -->" +flag8);
 				
 			//Total price field validation
 				WebElement	totalprice=driver.findElement(By.id("post-totalprice"));
@@ -110,6 +107,6 @@ public class ResidentialPlot_Validation
 				driver.close();
 
 	}
-
+	
 	
 }

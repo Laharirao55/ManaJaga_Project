@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class IndustrialLand_Validation 
+public class PP_Sale_IndustrialLand_Validation 
 {
 
 
