@@ -6,22 +6,33 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import commonUtils.CommonMethods;
+import object_repository.manajaga_elements;
+
 public class PP_PG_Apartment_Validations 
 {
 
-	public static void main(String[] args) throws Exception 
+	public static WebDriver driver=new ChromeDriver();
+//	public static void selectDD(String id,String value) throws Throwable
+//	{
+//		WebElement propertytype_DD =driver.findElement(By.id(id));
+//		new Select(propertytype_DD).selectByVisibleText(value);
+//		Thread.sleep(1000);
+//	}
+	
+	
+	public static void main(String[] args) throws Throwable 
 	{
 		
 
-		//browser initiation
-			System.setProperty("webdriver.chrome.driver","Drivers\\chromedriver.exe");
-			WebDriver driver=new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver","Drivers\\chromedriver.exe");
+		
 		//open url
 			driver.get("https://manajaga.com/");
 			driver.manage().window().maximize();
 			
 		// open post free
-			driver.findElement(By.id("blink_me")).click();
+			driver.findElement(manajaga_elements.PostFree_btn).click();
 			
 		// Select Post Property
 			driver.findElement(By.xpath("//label[@for='PostProperty']")).click();
@@ -38,9 +49,9 @@ public class PP_PG_Apartment_Validations
 		// Select next button
 			driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[2]")).click();
 			
+			//selectDD("propertyTypePG", "Apartment");
 		//select property from DD
-			WebElement propertytype_DD =driver.findElement(By.id("propertyTypePG"));
-			new Select(propertytype_DD).selectByVisibleText("Apartment");
+			
 			
 			Thread.sleep(1000);
 			

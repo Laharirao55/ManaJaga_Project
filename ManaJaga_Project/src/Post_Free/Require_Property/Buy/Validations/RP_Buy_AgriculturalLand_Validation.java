@@ -11,13 +11,20 @@ import org.openqa.selenium.support.ui.Select;
 public class RP_Buy_AgriculturalLand_Validation 
 {
 
+	public static WebDriver driver=new ChromeDriver();
+//	public static void selectDD(String id,String value) throws Throwable
+//	{
+//		WebElement propertytype_DD =driver.findElement(By.id(id));
+//		new Select(propertytype_DD).selectByVisibleText(value);
+//		Thread.sleep(1000);
+//	}
 	public static void main(String[] args) throws Exception 
 	{
 		
 
 		//browser initiation
 			System.setProperty("webdriver.chrome.driver","Drivers\\chromedriver.exe");
-			WebDriver driver=new ChromeDriver();
+			
 		//open url
 			driver.get("https://manajaga.com/");
 			driver.manage().window().maximize();
@@ -26,7 +33,7 @@ public class RP_Buy_AgriculturalLand_Validation
 		// open post free
 			driver.findElement(By.id("blink_me")).click();
 			
-		// Select Post Property
+		// Select Require Property
 			driver.findElement(By.xpath("//label[@for='RequiredProperty']")).click();
 			
 		//Select next button
@@ -43,10 +50,11 @@ public class RP_Buy_AgriculturalLand_Validation
 			driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[2]")).click();
 			
 		//select property from DD
-			WebElement propertytype_DD =driver.findElement(By.id("requirePropertyTypeBuyRent"));
-			new Select(propertytype_DD).selectByVisibleText("Agriculture Land");
+		//	WebElement propertytype_DD =driver.findElement(By.id("requirePropertyTypeBuyRent"));
+		//	new Select(propertytype_DD).selectByVisibleText("Agriculture Land");
+		//	Thread.sleep(1000);
 			
-			Thread.sleep(1000);
+		//	selectDD(id, value);
 		
 			
 			//ExpectedArea field validation

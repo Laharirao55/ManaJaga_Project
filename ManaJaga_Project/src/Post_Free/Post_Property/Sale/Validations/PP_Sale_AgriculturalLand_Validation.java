@@ -9,13 +9,14 @@ import org.openqa.selenium.support.ui.Select;
 public class PP_Sale_AgriculturalLand_Validation 
 {
 
-
+	public static WebDriver driver;
+	
 	public static void main(String[] args) throws Exception 
 	{
 		
 			//browser initiation
 				System.setProperty("webdriver.chrome.driver","Drivers\\chromedriver.exe");
-				WebDriver driver=new ChromeDriver();
+				driver=new ChromeDriver();
 			//open url
 				driver.get("https://manajaga.com/");
 				driver.manage().window().maximize();

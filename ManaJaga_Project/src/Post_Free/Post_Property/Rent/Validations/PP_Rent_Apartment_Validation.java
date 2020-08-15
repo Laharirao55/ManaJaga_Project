@@ -6,15 +6,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class PP_Rent_Apartment_Validation {
+public class PP_Rent_Apartment_Validation 
+{
 
-	public static void main(String[] args) throws Exception 
+	public static WebDriver driver=new ChromeDriver();
+	public static void selectDD(String id,String value) throws Throwable
+	{
+		WebElement propertytype_DD =driver.findElement(By.id(id));
+		new Select(propertytype_DD).selectByVisibleText(value);
+		Thread.sleep(1000);
+	}
+	
+	public static void main(String[] args) throws Throwable 
 	{
 	
 		
 				//browser initiation
 					System.setProperty("webdriver.chrome.driver","Drivers\\chromedriver.exe");
-					WebDriver driver=new ChromeDriver();
+					
 				//open url
 					driver.get("https://manajaga.com/");
 					driver.manage().window().maximize();
@@ -38,9 +47,10 @@ public class PP_Rent_Apartment_Validation {
 					driver.findElement(By.xpath("(//button[@class='btn btn-theme-2 nextBtn'][contains(.,'Next')])[2]")).click();
 					
 				//select property from DD
-					WebElement propertytype_DD =driver.findElement(By.id("propertyTypeRent"));
-					new Select(propertytype_DD).selectByVisibleText("Apartment");
+				//	WebElement propertytype_DD =driver.findElement(By.id("propertyTypeRent"));
+				//	new Select(propertytype_DD).selectByVisibleText("Apartment");
 		
+					selectDD("propertyTypeRent", "Apartment");
 				
 					Thread.sleep(3000);
 							
